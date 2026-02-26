@@ -1,0 +1,19 @@
+
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Broker bean -->
+    <bean id="zerodhaBroker" class="com.shubham.model.ZerodhaBroker"/>
+
+    <!-- Define Trader bean with dependency injection -->
+    <bean id="trader" class="com.shubham.model.Trader">
+        <property name="name" value="Rahul"/>
+        <property name="broker" ref="zerodhaBroker"/>
+    </bean>
+
+</beans>
