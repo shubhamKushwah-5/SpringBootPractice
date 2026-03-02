@@ -1,0 +1,46 @@
+Web Routing & Controllers
+@RestController: Marks a class as a web controller that handles REST API requests. It combines @Controller and @ResponseBody, meaning returned objects are automatically serialized into JSON.
+
+@RequestMapping: Used to map web requests onto specific handler classes or methods. It can map URLs, HTTP methods, request parameters, and media types.
+
+@GetMapping: A shortcut for @RequestMapping(method = RequestMethod.GET). Used to handle HTTP GET requests (retrieving data).
+
+@PostMapping: A shortcut for @RequestMapping(method = RequestMethod.POST). Used to handle HTTP POST requests (creating new data).
+
+@PutMapping: A shortcut for @RequestMapping(method = RequestMethod.PUT). Used to handle HTTP PUT requests (updating existing data).
+
+@DeleteMapping: A shortcut for @RequestMapping(method = RequestMethod.DELETE). Used to handle HTTP DELETE requests (removing data).
+
+📥 Request & Response Handling
+@PathVariable: Extracts values from the URI path. For example, in /users/{id}, it binds the {id} portion of the URL to a method parameter.
+
+@RequestBody: Indicates that a method parameter should be bound to the body of the web request. Spring deserializes the incoming JSON into a Java object.
+
+@RequestParam: Extracts query parameters from the URL (the part after the ?). For example, in /api?start=2025-02-01, it binds "2025-02-01" to your parameter.
+
+ResponseEntity: Represents the entire HTTP response. It allows you to fully customize the HTTP status code (like 201 Created) and the response headers sent back to the client.
+
+🗄️ JPA & Database Entities
+@Entity: Marks a Java class as a JPA entity. This tells the framework that this class represents a table in the database.
+
+@Id: Specifies the primary key field of an entity class.
+
+@GeneratedValue: Used alongside @Id to configure how the primary key should be generated (e.g., auto-incrementing numbers).
+
+⏳ JPA Entity Lifecycle
+@PrePersist: A JPA lifecycle callback that automatically runs a specific method right before a brand new entity is saved to the database for the very first time (great for createdAt).
+
+@PreUpdate: A JPA lifecycle callback that automatically runs a specific method right before an existing entity is updated in the database (great for updatedAt).
+
+⚙️ Spring Core & Dependency Injection
+@Autowired: Tells Spring to inject a dependency automatically into your class.
+
+@Repository: A specialized @Component used for Data Access Object (DAO) classes. It encapsulates database logic and translates SQL exceptions into standard Spring errors.
+
+✅ Validation
+@Valid: Triggers Spring to check an incoming object against all your validation rules before the controller method executes.
+
+@NotBlank: A constraint validation annotation for Strings. It ensures the string is not null and is not just empty spaces.
+
+☕ Java Core
+LocalDateTime: A class from java.time that represents a specific date AND an exact time on the clock (e.g., 2026-03-01T14:30:00), used for exact timestamps.
