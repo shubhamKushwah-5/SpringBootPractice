@@ -44,3 +44,18 @@ ResponseEntity: Represents the entire HTTP response. It allows you to fully cust
 
 ☕ Java Core
 LocalDateTime: A class from java.time that represents a specific date AND an exact time on the clock (e.g., 2026-03-01T14:30:00), used for exact timestamps.
+
+**Front:** What is JWT?  
+**Back:** JSON Web Token. A secure way to transmit user identity between client and server. Contains header, payload, signature.
+
+**Front:** What's in JWT payload?  
+**Back:** User data (username, role, expiration). Base64 encoded, NOT encrypted. Anyone can read it.
+
+**Front:** What's JWT signature for?  
+**Back:** Proves token hasn't been tampered with. Only server with secret key can generate valid signature.
+
+**Front:** @EnableWebSecurity  
+**Back:** Enables Spring Security in the application. Used on configuration class.
+
+**Front:** BCryptPasswordEncoder  
+**Back:** Hashes passwords using bcrypt algorithm. One-way encryption - can't be decrypted, only verified.
