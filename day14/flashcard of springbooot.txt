@@ -59,3 +59,9 @@ LocalDateTime: A class from java.time that represents a specific date AND an exa
 
 **Front:** BCryptPasswordEncoder  
 **Back:** Hashes passwords using bcrypt algorithm. One-way encryption - can't be decrypted, only verified.
+
+DTO = Data Transfer Object. Used to send/receive data in API requests/responses.
+@OneToMany = Relationship annotation. One user has many trades. Defines database relationship.
+Optional<T> = Java wrapper that may or may not contain a value. Used for safe null handling.
+BCrypt salt = Random data added to password before hashing. Makes same password hash differently each time.
+existsByUsername() = Custom repository method. Spring generates implementation automatically based on method name.
