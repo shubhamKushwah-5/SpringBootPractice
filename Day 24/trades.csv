@@ -1,0 +1,4 @@
+symbol,type,entry_price,exit_price,quantity,strategy,trade_date
+RELIANCE,BUY,2500,2550,10,Intraday,2025-02-20 10:00:00
+TCS,BUY,3500,3450,5,Swing,2025-02-20 11:00:00
+INFY,BUY,1500,1550,20,Scalping,2025-02-20 12:00:00
