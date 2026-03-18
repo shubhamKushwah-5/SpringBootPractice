@@ -1,12 +1,14 @@
 package com.shubham.practice.Day21.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
-@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +26,7 @@ public class Product {
     @PositiveOrZero
     private int stock;
 
-    @Column(name = "image_url")
-    private String imageUrl;//stores filename
-
-
     //Getter and setters
-    public String getImageUrl() {return imageUrl;}
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl;}
-
     public Long getId(){return id;}
     public void setId(Long id){ this.id = id;}
 

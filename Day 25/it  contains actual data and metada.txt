@@ -1,0 +1,17 @@
+it  contains actual data and metadata like getpage and other
+pageable is an interface which tell spring to get data in chunks instead of whole data
+Pageable pageable = PageRequest.of(pageno,size, Sort.by(required field in "").ascending())
+sorting is added to pageable object aand this pageable is used in repo 
+so to efficiently retrieve data and improving memory usage and thus improving user experience as displaying all page at once to user will be very inefficient and not user freindly.
+it select from our table with constraint of sort and username and as per page size.
+metadata im not sure.
+they click on screen and that frontend send to backend thus our controller the required page number and size like metadata store ucrent page.
+
+
+multipart file are send by user from frontend like images.
+in local or server using and in db we only store its name files are stored separately to remove load.
+as if similar filename eixst than there will be issue so we use unique names for all files internally even if frontend give similar names.
+in our case only file name which is unique using uuid.
+using controer im not sure what you are asking.
+used when front end send other thantext like an image file or something.
+

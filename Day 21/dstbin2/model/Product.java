@@ -24,14 +24,7 @@ public class Product {
     @PositiveOrZero
     private int stock;
 
-    @Column(name = "image_url")
-    private String imageUrl;//stores filename
-
-
     //Getter and setters
-    public String getImageUrl() {return imageUrl;}
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl;}
-
     public Long getId(){return id;}
     public void setId(Long id){ this.id = id;}
 
